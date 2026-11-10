@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Michael Wealth — Web Developer, Creative Technologist and Digital Solutions Builder." />
+  <meta name="author" content="Michael Wealth" />
+  <meta name="theme-color" content="#09090b" />
+  <meta property="og:title" content="Michael Wealth | Web Developer & Digital Solutions Builder" />
+  <meta property="og:description" content="Developer portfolio showcasing projects, technical skills, experience and professional credentials." />
+  <meta property="og:type" content="website" />
+  <title>Michael Wealth | Web Developer & Digital Solutions Builder</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ink: '#09090b',
+            panel: '#111113',
+            accent: '#38bdf8',
+            violet: '#8b5cf6',
+          },
+          boxShadow: {
+            glow: '0 0 60px rgba(56,189,248,.12)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+<link rel="icon" type="image/png" href="./assets/favicon.png">
+
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body class="bg-zinc-950 text-zinc-100 antialiased transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-100">
+  <!-- Background -->
+  <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute left-1/2 top-[-18rem] h-[35rem] w-[35rem] -translate-x-1/2 rounded-full bg-sky-500/10 blur-3xl"></div>
+    <div class="absolute right-[-12rem] top-[35%] h-[28rem] w-[28rem] rounded-full bg-violet-500/10 blur-3xl"></div>
+    <div class="absolute inset-0 opacity-[0.035] grid-bg"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-zinc-950/75 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Primary navigation">
+      <a href="#home" class="group flex items-center gap-3" aria-label="Michael Wealth home">
+        <span class="grid h-9 w-9 place-items-center rounded-xl border border-sky-400/30 bg-sky-400/10 font-bold text-sky-300">MW</span>
+        <span class="hidden text-sm font-semibold tracking-tight sm:block">Michael Wealth</span>
+      </a>
+
+      <div class="hidden items-center gap-7 md:flex">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#resume">Resume</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle light and dark theme">
+          <i data-lucide="sun" class="h-4 w-4"></i>
+        </button>
+        <button id="menu-toggle" class="icon-btn md:hidden" type="button" aria-label="Open navigation menu" aria-expanded="false">
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-zinc-950/95 px-5 py-4 md:hidden">
+      <div class="flex flex-col gap-1">
+        <a class="mobile-link" href="#about">About</a>
+        <a class="mobile-link" href="#skills">Skills</a>
+        <a class="mobile-link" href="#projects">Projects</a>
+        <a class="mobile-link" href="#resume">Resume</a>
+        <a class="mobile-link" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="mx-auto flex min-h-screen max-w-7xl items-center px-5 pb-20 pt-32 lg:px-8">
+      <div class="grid w-full gap-14 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
+        <div class="reveal">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/5 px-3 py-1.5 text-xs font-medium text-emerald-300">
+            <span class="status-dot"></span>
+            Available for selected opportunities
+          </div>
+
+          <p class="mb-4 font-mono text-sm text-sky-300">&lt;hello /&gt; I'm Michael Wealth</p>
+
+          <h1 class="max-w-4xl font-display text-5xl font-bold leading-[0.98] tracking-[-0.04em] text-white sm:text-6xl lg:text-8xl">
+            I build <span class="gradient-text">digital products</span> that solve real problems.
+          </h1>
+
+          <p class="mt-7 max-w-2xl text-base leading-8 text-zinc-400 sm:text-lg">
+            Web developer, software engineer, and creative technologist focused on building responsive websites, web applications, business solutions, and practical digital experiences.
+          </p>
+
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#projects" class="btn-primary">
+              View Projects <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+            </a>
+            <a href="./assets/resume.pdf" class="btn-secondary" download>
+              Download Resume <i data-lucide="download" class="h-4 w-4"></i>
+            </a>
+          </div>
+
+          <div class="mt-10 flex flex-wrap items-center gap-5 text-sm text-zinc-500">
+            <a class="social-link" href="https://github.com/maicodon" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="github" class="h-4 w-4"></i> GitHub
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/in/maicodon" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="linkedin" class="h-4 w-4"></i> LinkedIn
+            </a>
+            <a class="social-link" href="mailto:michaelwealthdev@gmail.com">
+              <i data-lucide="mail" class="h-4 w-4"></i> Email
+            </a>
+          </div>
+        </div>
+
+        <!-- Professional portrait -->
+        <div class="reveal delay-150 hero-portrait-wrap">
+          <div class="hero-portrait-frame">
+            <img src="./assets/profile-photo.webp" alt="Michael Wealth, web developer and creative technologist" class="hero-portrait" fetchpriority="high" />
+            <div class="portrait-caption">
+              <span class="portrait-caption-dot"></span>
+              <span><strong>Michael Wealth</strong><small>Web Developer. Software Engineer. Creative Technologist</small></span>
+            </div>
+          </div>
+          <div class="portrait-orbit portrait-orbit-one"></div>
+          <div class="portrait-orbit portrait-orbit-two"></div>
+          <div class="portrait-note"><i data-lucide="code-2" class="h-4 w-4"></i><span>Building useful digital experiences</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-shell">
+      <div class="section-heading reveal">
+        <span class="eyebrow">01 / About</span>
+        <h2>Developer mindset. <span class="muted-heading">Real-world problem solving.</span></h2>
+      </div>
+
+      <div class="mt-12 grid gap-10 lg:grid-cols-[.85fr_1.15fr]">
+        <div class="reveal">
+          <div class="profile-card">
+            <div class="profile-initials">MW</div>
+            <div>
+              <p class="text-lg font-semibold text-white">Michael Wealth</p>
+              <p class="mt-1 text-sm text-zinc-500">Web Developer. Software Engineer. Creative Technologist</p>
+            </div>
+          </div>
+
+          <div class="mt-5 grid grid-cols-2 gap-3">
+            <div class="metric-card"><strong>2012+</strong><span>Creative & digital work</span></div>
+            <div class="metric-card"><strong>2026</strong><span>Development focus</span></div>
+          </div>
+        </div>
+
+        <div class="reveal delay-100 space-y-5 text-zinc-400 leading-8">
+          <p>
+            I combine creative design, technology and practical business thinking to build digital experiences that are useful, accessible and easy to maintain.
+          </p>
+          <p>
+            My background spans graphic design, branding, web design, digital marketing, multimedia, business solutions and technology training. I am now deepening that foundation through modern web development and software engineering.
+          </p>
+          <p>
+            I enjoy turning an idea, workflow or business problem into a clear digital product - from a responsive website to an application, automation or data-driven solution.
+          </p>
+
+        <div class="flex flex-wrap gap-3 pt-4 identity-tags">
+        <span class="tag">Problem Solver</span>
+        <span class="tag">Continuous Learner</span>
+        <span class="tag">Builder</span>
+        <span class="tag">Creative Technologist</span>
+        </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section-shell">
+      <div class="section-heading reveal">
+        <span class="eyebrow">02 / Skills</span>
+        <h2>Tools I use to <span class="muted-heading">build and ship.</span></h2>
+      </div>
+
+      <div class="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i data-lucide="layout-template"></i></div>
+          <h3>Frontend</h3>
+          <p>Building responsive, accessible interfaces.</p>
+          <div class="skill-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Tailwind CSS</span><span>React</span><span>Next.js</span></div>
+        </div>
+
+        <div class="skill-card reveal delay-100">
+          <div class="skill-icon"><i data-lucide="server"></i></div>
+          <h3>Backend & APIs</h3>
+          <p>Connecting interfaces to useful data and services.</p>
+          <div class="skill-list"><span>Node.js</span><span>REST APIs</span><span>Google Apps Script</span><span>Databases</span></div>
+        </div>
+
+        <div class="skill-card reveal delay-150">
+          <div class="skill-icon"><i data-lucide="database"></i></div>
+          <h3>Data & Analytics</h3>
+          <p>Working with data to support practical decisions.</p>
+          <div class="skill-list"><span>Excel</span><span>SQL</span><span>Power BI</span></div>
+        </div>
+
+        <div class="skill-card reveal delay-200">
+          <div class="skill-icon"><i data-lucide="wrench"></i></div>
+          <h3>Tools</h3>
+          <p>Modern tools for collaboration and delivery.</p>
+          <div class="skill-list"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Vercel</span><span>HubSpot</span><span>Zapier</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section-shell">
+      <div class="section-heading reveal">
+        <span class="eyebrow">03 / Projects</span>
+        <h2>Selected work. <span class="muted-heading">Built to be useful.</span></h2>
+      </div>
+
+      <div id="project-grid" class="mt-8 grid gap-6 md:grid-cols-2"></div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="section-shell">
+      <div class="section-heading reveal">
+        <span class="eyebrow">04 / Resume</span>
+        <h2>Experience that <span class="muted-heading">connects creativity and technology.</span></h2>
+      </div>
+
+      <div class="mt-12 grid gap-8 lg:grid-cols-[1.25fr_.75fr]">
+        <div class="timeline reveal">
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div>
+              <p class="timeline-date">2012 — Present</p>
+              <h3>Creative Director / Digital Solutions</h3>
+              <p class="timeline-company">Milestone Media & Technologies</p>
+              <p class="timeline-text">Creative design, branding, web development, marketing, multimedia, technology solutions and client delivery.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div>
+              <p class="timeline-date">2022-2023</p>
+              <h3>Ambassador & Moderator</h3>
+              <p class="timeline-company">Perpetual Protocol</p>
+              <p class="timeline-text">Supported international content and moderator communities through campaigns, brand awareness, and user engagement.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div>
+              <p class="timeline-date">2020</p>
+              <h3>Digital Skills Facilitator</h3>
+              <p class="timeline-company">Tech4Dev · ATC Nigeria Community initiatives</p>
+              <p class="timeline-text">Facilitation, mentoring, digital skills, research and technology-enabled community work.</p>
+            </div>
+          </article>
+        </div>
+
+        <aside class="resume-card reveal delay-100">
+          <i data-lucide="file-text" class="h-7 w-7 text-sky-300"></i>
+          <h3>Want the full story?</h3>
+          <p>Download the latest CV for a complete view of experience, education, certifications and capabilities.</p>
+          <a href="./assets/resume.pdf" class="btn-primary w-full" download>
+            Download CV <i data-lucide="download" class="h-4 w-4"></i>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-shell pb-24">
+      <div class="section-heading reveal">
+        <span class="eyebrow">05 / Contact</span>
+        <h2>Have an idea? <span class="muted-heading">Let's build something useful.</span></h2>
+      </div>
+
+      <div class="mt-12 grid gap-8 lg:grid-cols-[.7fr_1.3fr]">
+        <div class="reveal space-y-4">
+          <div class="contact-card">
+            <i data-lucide="mail"></i>
+            <div><span>Email</span><a href="mailto:michaelwealthdev@gmail.com">michaelwealthdev@gmail.com</a></div>
+          </div>
+          <div class="contact-card">
+            <i data-lucide="linkedin"></i>
+            <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/maicodon" target="_blank" rel="noopener noreferrer">linkedin.com/in/maicodon</a></div>
+          </div>
+          <div class="contact-card">
+            <i data-lucide="github"></i>
+            <div><span>GitHub</span><a href="https://github.com/maicodon" target="_blank" rel="noopener noreferrer">github.com/maicodon</a></div>
+          </div>
+        </div>
+
+       <form id="contact-form" class="form-card reveal delay-100" novalidate>
+
+  <!-- Web3Forms Access Key -->
+  <input
+    type="hidden"
+    name="access_key"
+    value="YOUR_WEB3FORMS_ACCESS_KEY"
+  >
+
+  <!-- Email subject -->
+  <input
+    type="hidden"
+    name="from_name"
+    value="Portfolio Contact Form"
+  >
+
+  <!-- Anti-spam honeypot -->
+  <input
+    type="checkbox"
+    name="botcheck"
+    class="hidden"
+    tabindex="-1"
+    autocomplete="off"
+  >
+
+  <div class="grid gap-5 sm:grid-cols-2">
+
+    <label class="field">
+      <span>Name</span>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        autocomplete="name"
+        placeholder="Your name"
+        required
+      >
+    </label>
+
+    <label class="field">
+      <span>Email</span>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        placeholder="you@example.com"
+        required
+      >
+    </label>
+
+  </div>
+
+  <label class="field mt-5">
+    <span>Subject</span>
+    <input
+      id="subject"
+      name="subject"
+      type="text"
+      placeholder="Project inquiry"
+      required
+    >
+  </label>
+
+  <label class="field mt-5">
+    <span>Message</span>
+    <textarea
+      id="message"
+      name="message"
+      rows="6"
+      placeholder="Tell me what you're building..."
+      required
+    ></textarea>
+  </label>
+
+  <div
+    id="form-status"
+    class="mt-4 hidden rounded-xl border px-4 py-3 text-sm"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+  <button
+    id="submit-button"
+    class="btn-primary mt-5 w-full sm:w-auto"
+    type="submit"
+  >
+    <span id="submit-text">Send Message</span>
+    <i data-lucide="send" class="h-4 w-4"></i>
+  </button>
+</form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 px-5 py-8">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
+      <p>© <span id="year"></span> Michael Wealth. All rights reserved.</p>
+      <a href="#home" class="inline-flex items-center gap-2 text-zinc-400 transition hover:text-white">Back to top <i data-lucide="arrow-up" class="h-4 w-4"></i></a>
+    </div>
+  </footer>
+
+  <!-- Project modal -->
+  <div id="project-modal" class="fixed inset-0 z-[100] hidden p-4 sm:p-8" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="modal-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+    <div class="modal-panel relative mx-auto mt-8 max-h-[90vh] max-w-3xl overflow-y-auto rounded-2xl border border-white/10 bg-zinc-900 shadow-2xl sm:mt-12">
+      <button id="modal-close" class="icon-btn absolute right-4 top-4 z-10" type="button" aria-label="Close project details">
+        <i data-lucide="x"></i>
+      </button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="./js/app.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
